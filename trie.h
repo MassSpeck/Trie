@@ -1,9 +1,13 @@
-#ifndef PI_TRIE_H
-#define PI_TRIE_H
+#ifndef _TRIE_H
+#define _TRIE_H
 
 #include <stddef.h>
 
-enum { TRIE_NODE_LOW_CHILD=0, TRIE_NODE_HIGH_CHILD=1, TRIE_NODE_EQ_CHILD=2 };
+enum { 
+    TRIE_NODE_LOW_CHILD = 0,
+    TRIE_NODE_HIGH_CHILD = 1,
+    TRIE_NODE_EQ_CHILD = 2 
+};
 
 /* This trie is a ternary tree. */
 typedef struct _TRIE_NODE {
@@ -25,4 +29,4 @@ void Trie_free( TRIE* self );
 void* Trie_Lookup( TRIE* self, const char* key );
 int Trie_Insert( TRIE* self, const char* key, void* data );
 
-#endif /* PI_TRIE_H */
+#endif /* _TRIE_H */

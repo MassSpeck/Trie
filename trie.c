@@ -181,6 +181,9 @@ int main()
 
     Trie_free( testTrie );
 
+    printf( "sizeof( TRIE_NODE ) => %lu\n",
+            ( unsigned long )sizeof( TRIE_NODE ) );
+
     return 0;
 }
 #endif
